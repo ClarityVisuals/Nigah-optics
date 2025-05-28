@@ -30,10 +30,10 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 max-w-2xl text-white p-8 sm:p-12 md:p-16 lg:p-24 flex flex-col items-start justify-center h-full">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-md">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-md">
             CLARITY
           </h1>
-          <p className="text-lg md:text-xl mb-10 max-w-xl drop-shadow-sm">
+          <p className="text-base md:text-lg mb-10 max-w-xl drop-shadow-sm">
             Discover your perfect vision with our curated collection of stylish eyewear. Quality frames, exceptional lenses, and a new way to see the world.
           </p>
           <Button asChild size="lg" className="px-10 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-lg transition-transform hover:scale-105">
@@ -43,8 +43,8 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
+        <section className="py-16 bg-background">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-semibold">Featured Products</h2>
             <Button variant="link" asChild className="text-primary hover:text-accent">
@@ -58,12 +58,12 @@ export default function HomePage() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Visual Lookbooks Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">
+        <section className="py-16 bg-background">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-semibold">Discover Our Lookbooks</h2>
             <Button variant="link" asChild className="text-primary hover:text-accent">
@@ -77,8 +77,8 @@ export default function HomePage() {
               <LookbookCard key={lookbook.id} lookbook={lookbook} />
             ))}
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Call to Action - Example: Newsletter Signup or Special Offer */}
       <section className="bg-card py-16">
