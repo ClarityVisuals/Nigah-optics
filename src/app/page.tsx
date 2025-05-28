@@ -26,21 +26,9 @@ export default function HomePage() {
           data-ai-hint="fashion model eyeglasses"
           priority
         />
+        {/* Content within the hero section is removed */}
         <div className="relative z-10 max-w-3xl mx-auto text-white p-8 sm:p-12 md:p-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md">
-            Find Your Perfect Pair
-          </h1>
-          <p className="text-lg md:text-xl mb-8 drop-shadow-sm">
-            Explore our curated collection of designer eyewear and discover frames that define your style.
-          </p>
-          <div className="space-x-4">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg transition-transform hover:scale-105">
-              <Link href="/products">Shop All Glasses</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="bg-white/20 text-white border-white hover:bg-white/30 shadow-lg transition-transform hover:scale-105">
-              <Link href="/virtual-try-on">Virtual Try-On</Link>
-            </Button>
-          </div>
+          {/* All text and buttons previously here are now removed */}
         </div>
       </section>
 
