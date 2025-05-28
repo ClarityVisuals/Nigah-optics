@@ -15,7 +15,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-center">
+      <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
           src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
@@ -25,7 +25,11 @@ export default function HomePage() {
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        <div className="relative z-10 max-w-3xl mx-auto text-white p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center h-full">
+        {/* Overlay to darken the image for text visibility */}
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-2xl text-white p-8 sm:p-12 md:p-16 lg:p-24 flex flex-col items-start justify-center h-full">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-md">
             CLARITY
           </h1>
@@ -39,7 +43,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products Section */}
-      <section className="py-16">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-semibold">Featured Products</h2>
@@ -58,7 +62,7 @@ export default function HomePage() {
       </section>
 
       {/* Visual Lookbooks Section */}
-      <section className="py-16">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-3xl font-semibold">Discover Our Lookbooks</h2>
