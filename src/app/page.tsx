@@ -6,7 +6,7 @@ import ProductCard from '@/components/product-card';
 import LookbookCard from '@/components/lookbook-card';
 import { getFeaturedProducts } from '@/data/products';
 import { getFeaturedLookbooks } from '@/data/lookbooks';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Eye, ShoppingBag } from 'lucide-react';
 
 export default function HomePage() {
   const featuredProducts = getFeaturedProducts(3);
@@ -15,13 +15,13 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-start text-left">
+      <section className="relative min-h-screen flex items-center justify-start text-left bg-black">
         <Image
           src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0 opacity-100"
+          className="absolute inset-0 z-0"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
@@ -44,30 +44,37 @@ export default function HomePage() {
       </section>
 
       {/* SHOP Section (formerly Featured Products) */}
-      <div className="container mx-auto px-4">
-        <section className="py-16 bg-background">
-          <div className="flex flex-col items-center mb-8">
-            <h2 className="text-3xl font-semibold">SHOP</h2>
-            <Button variant="link" asChild className="text-primary hover:text-accent mt-2">
+      <div className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center mb-12">
+            <ShoppingBag className="h-12 w-12 text-primary mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-3">Shop Our Collection</h2>
+            <p className="text-lg text-muted-foreground max-w-xl mb-8">
+              Explore a wide variety of frames, from timeless classics to the latest trends. Find the perfect pair to express your style.
+            </p>
+            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base">
               <Link href="/products">
-                View All <ChevronRight className="ml-1 h-4 w-4" />
+                Explore All Products <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-        </section>
+        </div>
       </div>
 
       {/* Visual Lookbooks Section */}
-      <div className="container mx-auto px-4">
-        <section className="py-16 bg-background">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-semibold">Discover Our Lookbooks</h2>
-            <Button variant="link" asChild className="text-primary hover:text-accent">
+      <div className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-10 text-center md:text-left">
+            <div className="mb-6 md:mb-0">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Discover Our Lookbooks</h2>
+              <p className="text-muted-foreground max-w-lg">Get inspired by our curated collections and see how our eyewear complements different styles.</p>
+            </div>
+            <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary/10 hover:text-primary px-6 py-3">
               <Link href="/lookbooks">
                 Explore Lookbooks <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
@@ -78,24 +85,25 @@ export default function HomePage() {
               <LookbookCard key={lookbook.id} lookbook={lookbook} />
             ))}
           </div>
-        </section>
+        </div>
       </div>
 
       {/* Call to Action - Example: Newsletter Signup or Special Offer */}
-      <section className="bg-card py-16">
+      <section className="bg-background py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Stay In Style</h2>
-          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+          <Eye className="h-12 w-12 text-accent mx-auto mb-4" />
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">Stay In Style</h2>
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from EYENISA.
           </p>
-          <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow p-3 border rounded-md focus:ring-2 focus:ring-primary outline-none"
+              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base"
               aria-label="Email for newsletter"
             />
-            <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
               Subscribe
             </Button>
           </form>
