@@ -33,7 +33,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased flex flex-col min-h-screen`}>
         <Navbar />
-        <main className="flex-grow">
+        {/* Added pt-16 to account for fixed h-16 navbar */}
+        <main className="flex-grow pt-16"> 
           {children}
         </main>
         <Footer />

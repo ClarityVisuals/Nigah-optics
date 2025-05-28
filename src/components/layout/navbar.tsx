@@ -1,6 +1,5 @@
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Glasses, ShoppingBag, Camera, BookOpenText, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -14,19 +13,13 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <Image
-        src="https://placehold.co/1600x900.png" 
-        alt="Navbar background"
-        layout="fill"
-        objectFit="cover"
-        className="absolute inset-0 z-0 opacity-10" 
-        data-ai-hint="abstract gradient fashion"
-      />
-      <div className="relative z-10 container mx-auto flex h-16 items-center justify-between px-4">
+    <header className="fixed top-0 left-0 w-full z-50">
+      {/* Removed background image and styling from here, navbar is now transparent */}
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary">
           <Glasses className="h-7 w-7" />
-          <span>Spectacle Studio</span>
+          {/* Text color might need adjustment if it clashes with hero image. Adding a subtle shadow. */}
+          <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">Spectacle Studio</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -34,7 +27,8 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-foreground/70 transition-colors hover:text-foreground flex items-center gap-1"
+              // Adding a subtle text shadow to nav links for better visibility
+              className="text-foreground/90 transition-colors hover:text-foreground flex items-center gap-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)]"
             >
               {item.icon}
               {item.label}
@@ -46,12 +40,12 @@ export default function Navbar() {
           <ModeToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden">
+              <Button variant="outline" size="icon" className="md:hidden bg-background/80 hover:bg-background"> {/* Added slight background to mobile menu button for visibility */}
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" className="bg-background"> {/* Ensure sheet content has a background */}
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary mb-4">
                   <Glasses className="h-7 w-7" />

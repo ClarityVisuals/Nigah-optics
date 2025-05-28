@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/product-card';
-import LookbookCard from '@/components/lookbook-card'; // We'll create this
-import { getFeaturedProducts, mockProducts } from '@/data/products';
-import { getFeaturedLookbooks, mockLookbooks } from '@/data/lookbooks';
+import LookbookCard from '@/components/lookbook-card';
+import { getFeaturedProducts } from '@/data/products';
+import { getFeaturedLookbooks } from '@/data/lookbooks';
 import { ChevronRight } from 'lucide-react';
 
 export default function HomePage() {
@@ -13,15 +13,16 @@ export default function HomePage() {
   const featuredLookbooks = getFeaturedLookbooks(2);
 
   return (
-    <div>
+    <>
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-200px)] md:min-h-[600px] flex items-center justify-center text-center bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70">
+      {/* Adjusted min-height to screen height, image opacity removed, content padding managed by layout */}
+      <section className="relative min-h-screen flex items-center justify-center text-center">
         <Image
           src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0 opacity-30"
+          className="absolute inset-0 z-0" 
           data-ai-hint="fashion model eyeglasses"
           priority
         />
@@ -101,6 +102,6 @@ export default function HomePage() {
           </form>
         </div>
       </section>
-    </div>
+    </>
   );
 }
