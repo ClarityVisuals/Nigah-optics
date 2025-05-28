@@ -6,11 +6,11 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ModeToggle } from './mode-toggle';
 
 const navItems = [
-  { href: '/', label: 'HOME', icon: <Home className="h-4 w-4" /> },
-  { href: '/products', label: 'SHOP', icon: <ShoppingBag className="h-4 w-4" /> },
-  { href: '/about', label: 'ABOUT', icon: <Users className="h-4 w-4" /> },
-  { href: '/contact', label: 'LOCATION', icon: <MapPin className="h-4 w-4" /> },
-  { href: '/about#why-us', label: 'WHY US', icon: <Award className="h-4 w-4" /> } // Linking to about page, potentially a section
+  { href: '/', label: 'Home', icon: <Home className="h-4 w-4" /> },
+  { href: '/products', label: 'Shop', icon: <ShoppingBag className="h-4 w-4" /> },
+  { href: '/about', label: 'About', icon: <Users className="h-4 w-4" /> },
+  { href: '/contact', label: 'Location', icon: <MapPin className="h-4 w-4" /> },
+  { href: '/about#why-us', label: 'Why Us', icon: <Award className="h-4 w-4" /> } // Linking to about page, potentially a section
 ];
 
 export default function Navbar() {
