@@ -15,13 +15,13 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-start text-left bg-black">
+      <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
           src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 opacity-100"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
@@ -49,9 +49,6 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center mb-12">
             <ShoppingBag className="h-12 w-12 text-primary mb-4" />
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-3">Shop Our Collection</h2>
-            <p className="text-lg text-muted-foreground max-w-xl mb-8">
-              Explore a wide variety of frames, from timeless classics to the latest trends. Find the perfect pair to express your style.
-            </p>
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base">
               <Link href="/products">
                 Explore All Products <ChevronRight className="ml-2 h-5 w-5" />
