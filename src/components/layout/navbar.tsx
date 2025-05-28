@@ -17,7 +17,7 @@ export default function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary">
           <Glasses className="h-7 w-7" />
-          <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.7)] text-white">EYENISA</span>
+          <span className="text-foreground dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">EYENISA</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -25,7 +25,7 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-white/90 transition-colors hover:text-white flex items-center gap-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]"
+              className="text-foreground dark:text-white/90 transition-colors hover:text-primary dark:hover:text-white flex items-center gap-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
             >
               {item.icon}
               {item.label}
