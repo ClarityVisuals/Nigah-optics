@@ -16,12 +16,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Image
-        src="https://placehold.co/1920x100.png" // Using a wide, short aspect ratio for navbar
+        src="https://placehold.co/1600x900.png" 
         alt="Navbar background"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 z-0 opacity-10" // Subtle opacity
-        data-ai-hint="abstract gradient"
+        className="absolute inset-0 z-0 opacity-10" 
+        data-ai-hint="abstract gradient fashion"
       />
       <div className="relative z-10 container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary">

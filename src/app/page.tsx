@@ -13,9 +13,9 @@ export default function HomePage() {
   const featuredLookbooks = getFeaturedLookbooks(2);
 
   return (
-    <div className="space-y-16">
+    <div>
       {/* Hero Section */}
-      <section className="relative rounded-lg overflow-hidden shadow-xl min-h-[calc(100vh-200px)] md:min-h-[500px] flex items-center justify-center text-center bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70">
+      <section className="relative min-h-[calc(100vh-200px)] md:min-h-[600px] flex items-center justify-center text-center bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70">
         <Image
           src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
@@ -44,56 +44,62 @@ export default function HomePage() {
       </section>
 
       {/* Featured Products Section */}
-      <section>
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-semibold">Featured Products</h2>
-          <Button variant="link" asChild className="text-primary hover:text-accent">
-            <Link href="/products">
-              View All <ChevronRight className="ml-1 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-semibold">Featured Products</h2>
+            <Button variant="link" asChild className="text-primary hover:text-accent">
+              <Link href="/products">
+                View All <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Visual Lookbooks Section */}
-      <section>
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-semibold">Discover Our Lookbooks</h2>
-          <Button variant="link" asChild className="text-primary hover:text-accent">
-            <Link href="/lookbooks">
-              Explore Lookbooks <ChevronRight className="ml-1 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {featuredLookbooks.map((lookbook) => (
-            <LookbookCard key={lookbook.id} lookbook={lookbook} />
-          ))}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-semibold">Discover Our Lookbooks</h2>
+            <Button variant="link" asChild className="text-primary hover:text-accent">
+              <Link href="/lookbooks">
+                Explore Lookbooks <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {featuredLookbooks.map((lookbook) => (
+              <LookbookCard key={lookbook.id} lookbook={lookbook} />
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Call to Action - Example: Newsletter Signup or Special Offer */}
-      <section className="bg-card p-8 rounded-lg shadow-md text-center">
-        <h2 className="text-2xl font-semibold mb-4">Stay In Style</h2>
-        <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-          Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from Spectacle Studio.
-        </p>
-        <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-grow p-3 border rounded-md focus:ring-2 focus:ring-primary outline-none"
-            aria-label="Email for newsletter"
-          />
-          <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Subscribe
-          </Button>
-        </form>
+      <section className="bg-card py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-semibold mb-4">Stay In Style</h2>
+          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from Spectacle Studio.
+          </p>
+          <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-grow p-3 border rounded-md focus:ring-2 focus:ring-primary outline-none"
+              aria-label="Email for newsletter"
+            />
+            <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Subscribe
+            </Button>
+          </form>
+        </div>
       </section>
     </div>
   );
