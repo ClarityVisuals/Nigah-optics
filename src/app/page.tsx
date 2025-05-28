@@ -4,12 +4,11 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/product-card';
 import LookbookCard from '@/components/lookbook-card';
-import { getFeaturedProducts } from '@/data/products';
 import { getFeaturedLookbooks } from '@/data/lookbooks';
 import { ChevronRight, Eye, ShoppingBag } from 'lucide-react';
 
 export default function HomePage() {
-  const featuredProducts = getFeaturedProducts(3);
+  // featuredProducts variable is no longer needed for this section as products are removed.
   const featuredLookbooks = getFeaturedLookbooks(2);
 
   return (
@@ -21,7 +20,7 @@ export default function HomePage() {
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0 opacity-100"
+          className="absolute inset-0 z-0"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
@@ -43,7 +42,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SHOP Section (formerly Featured Products) */}
+      {/* SHOP Section */}
       <div className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center mb-12">
@@ -55,11 +54,7 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          {/* Product listings have been removed from this section */}
         </div>
       </div>
 
