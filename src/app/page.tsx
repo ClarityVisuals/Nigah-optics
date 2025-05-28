@@ -33,7 +33,7 @@ export default function HomePage() {
           <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-md">
             CLARITY
           </h1>
-          <p className="text-base md:text-lg mb-10 max-w-xl drop-shadow-sm">
+          <p className="text-sm md:text-base mb-10 max-w-xl drop-shadow-sm">
             Discover your perfect vision with our curated collection of stylish eyewear. Quality frames, exceptional lenses, and a new way to see the world.
           </p>
           <Button asChild size="lg" className="px-10 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-lg transition-transform hover:scale-105">
