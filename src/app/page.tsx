@@ -29,7 +29,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/30 z-0"></div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-2xl text-white p-8 sm:p-12 md:p-16 lg:p-24 flex flex-col items-start justify-center h-full">
+        <div className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-md">
             CLARITY
           </h1>
