@@ -138,8 +138,8 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">Email Us</h3>
-                  <a href="mailto:support@spectaclestudio.com" className="text-muted-foreground hover:text-primary">
-                    support@spectaclestudio.com
+                  <a href="mailto:support@eyenisa.com" className="text-muted-foreground hover:text-primary">
+                    support@eyenisa.com
                   </a>
                 </div>
               </div>

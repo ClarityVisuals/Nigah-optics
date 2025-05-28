@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <Glasses className="h-6 w-6 text-primary" />
-            <span className="font-semibold text-foreground">Spectacle Studio</span>
+            <span className="font-semibold text-foreground">EYENISA</span>
           </div>
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 md:mb-0 text-sm">
             <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link>
@@ -18,7 +18,7 @@ export default function Footer() {
             <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
           </nav>
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} Spectacle Studio. All rights reserved.
+            &copy; {currentYear} EYENISA. All rights reserved.
           </p>
         </div>
       </div>

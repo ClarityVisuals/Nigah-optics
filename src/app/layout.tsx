@@ -20,7 +20,7 @@ const fontMono = Inter({ // Using Inter as fallback for Mono as well
 });
 
 export const metadata: Metadata = {
-  title: 'Spectacle Studio - Find Your Perfect Pair',
+  title: 'EYENISA - Find Your Perfect Pair',
   description: 'Discover a wide range of stylish glasses and try them on virtually.',
 };
 

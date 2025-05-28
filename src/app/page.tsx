@@ -18,7 +18,7 @@ export default function HomePage() {
       {/* Adjusted min-height to screen height, image opacity removed, content padding managed by layout */}
       <section className="relative min-h-screen flex items-center justify-center text-center">
         <Image
-          src="https://placehold.co/1600x900.png"
+          src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
@@ -75,7 +75,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl font-semibold mb-4">Stay In Style</h2>
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-            Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from Spectacle Studio.
+            Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from EYENISA.
           </p>
           <form className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
             <input
