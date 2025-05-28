@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -14,7 +15,7 @@ export default function HomePage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative rounded-lg overflow-hidden shadow-xl min-h-[calc(100vh-200px)] md:min-h-[500px] flex items-center justify-center text-center p-8 bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70">
+      <section className="relative rounded-lg overflow-hidden shadow-xl min-h-[calc(100vh-200px)] md:min-h-[500px] flex items-center justify-center text-center bg-gradient-to-br from-primary/80 via-primary/60 to-accent/70">
         <Image
           src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
@@ -24,7 +25,7 @@ export default function HomePage() {
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        <div className="relative z-10 max-w-3xl mx-auto text-white">
+        <div className="relative z-10 max-w-3xl mx-auto text-white p-8 sm:p-12 md:p-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md">
             Find Your Perfect Pair
           </h1>

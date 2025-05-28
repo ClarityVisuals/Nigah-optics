@@ -1,4 +1,6 @@
+
 import Link from 'next/link';
+import Image from 'next/image';
 import { Glasses, ShoppingBag, Camera, BookOpenText, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -13,7 +15,15 @@ const navItems = [
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <Image
+        src="https://placehold.co/1920x100.png" // Using a wide, short aspect ratio for navbar
+        alt="Navbar background"
+        layout="fill"
+        objectFit="cover"
+        className="absolute inset-0 z-0 opacity-10" // Subtle opacity
+        data-ai-hint="abstract gradient"
+      />
+      <div className="relative z-10 container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary">
           <Glasses className="h-7 w-7" />
           <span>Spectacle Studio</span>
