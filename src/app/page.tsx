@@ -4,8 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import LookbookCard from '@/components/lookbook-card';
 import { getFeaturedLookbooks } from '@/data/lookbooks';
-import { ChevronRight, Eye, ShoppingBag, User, Users, Glasses as GlassesIcon, Sparkles } from 'lucide-react'; // Added User, Users, GlassesIcon, Sparkles
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'; // Added Card components
+import { ChevronRight, Eye, ShoppingBag, User, Users, Glasses as GlassesIcon, Sparkles } from 'lucide-react'; 
 
 export default function HomePage() {
   const featuredLookbooks = getFeaturedLookbooks(2);
@@ -13,39 +12,31 @@ export default function HomePage() {
   const categories = [
     {
       title: "Men Glasses",
-      description: "Discover stylish and durable frames designed for him.",
-      href: "/products?category=men", // Example link, adjust as needed
-      icon: <User className="h-8 w-8 text-primary mb-2" />,
-      imageSrc: "https://placehold.co/400x300.png",
+      href: "/products?category=men", 
+      imageSrc: "https://placehold.co/400x500.png", // Adjusted aspect ratio for placeholder
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
     {
       title: "Women Glasses",
-      description: "Explore elegant and fashionable eyewear for her.",
-      href: "/products?category=women", // Example link, adjust as needed
-      icon: <Users className="h-8 w-8 text-primary mb-2" />,
-      imageSrc: "https://placehold.co/400x300.png",
+      href: "/products?category=women", 
+      imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Collection of women's glasses",
-      aiHint: "women eyeglasses",
+      aiHint: "women eyeglasses model",
     },
     {
       title: "Sun Glasses",
-      description: "Protect your eyes with our trendy UV-protection sunglasses.",
-      href: "/products?category=sunglasses", // Example link, adjust as needed
-      icon: <GlassesIcon className="h-8 w-8 text-primary mb-2" />,
-      imageSrc: "https://placehold.co/400x300.png",
+      href: "/products?category=sunglasses", 
+      imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Collection of sunglasses",
-      aiHint: "sunglasses collection",
+      aiHint: "sunglasses fashion",
     },
     {
       title: "Lenses",
-      description: "High-quality prescription lenses for clear and comfortable vision.",
-      href: "/products?category=lenses", // Example link, adjust as needed
-      icon: <Sparkles className="h-8 w-8 text-primary mb-2" />,
-      imageSrc: "https://placehold.co/400x300.png",
+      href: "/products?category=lenses", 
+      imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Close-up of optical lenses",
-      aiHint: "prescription lenses",
+      aiHint: "prescription lenses detail",
     },
   ];
 
@@ -56,8 +47,8 @@ export default function HomePage() {
         <Image
           src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
-          fill // Changed from layout="fill" and objectFit="cover"
-          objectFit="cover" // Explicitly set objectFit
+          fill 
+          objectFit="cover" 
           className="absolute inset-0 z-0"
           data-ai-hint="fashion model eyeglasses"
           priority
@@ -86,7 +77,6 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center mb-12">
             <ShoppingBag className="h-12 w-12 text-primary mb-4" />
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-3">Shop Our Collection</h2>
-            {/* Removed descriptive text here as per previous request */}
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base mt-4">
               <Link href="/products">
                 Explore All Products <ChevronRight className="ml-2 h-5 w-5" />
@@ -97,38 +87,27 @@ export default function HomePage() {
           {/* Categories Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {categories.map((category) => (
-              <Card key={category.title} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-                <CardHeader className="p-0">
-                  <Link href={category.href} className="block aspect-w-4 aspect-h-3 overflow-hidden">
-                    <Image
-                      src={category.imageSrc}
-                      alt={category.imageAlt}
-                      width={400}
-                      height={300}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                      data-ai-hint={category.aiHint}
-                    />
-                  </Link>
-                </CardHeader>
-                <CardContent className="p-4 flex-grow">
-                  {/* Optional Icon: <div className="flex justify-center mb-2">{category.icon}</div> */}
-                  <CardTitle className="text-xl font-semibold mb-1 text-center group-hover:text-primary transition-colors">
-                    <Link href={category.href}>
+              <Link key={category.title} href={category.href} className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="relative aspect-[4/5] w-full"> {/* Adjusted aspect ratio closer to example */}
+                  <Image
+                    src={category.imageSrc}
+                    alt={category.imageAlt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    data-ai-hint={category.aiHint}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div> {/* Gradient overlay for text readability */}
+                  <div className="absolute bottom-0 left-0 p-4 md:p-6 z-10">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-1 drop-shadow-md">
                       {category.title}
-                    </Link>
-                  </CardTitle>
-                  <CardDescription className="text-sm text-muted-foreground text-center h-16"> {/* Fixed height for description alignment */}
-                    {category.description}
-                  </CardDescription>
-                </CardContent>
-                <CardFooter className="p-4 border-t mt-auto">
-                  <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                    <Link href={category.href}>
-                      Shop {category.title.split(' ')[0]} <ChevronRight className="ml-1 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardFooter>
-              </Card>
+                    </h3>
+                    <span className="text-base font-semibold text-white/90 hover:text-white group-hover:underline flex items-center transition-colors">
+                      Shop Now <ChevronRight className="ml-1 h-5 w-5" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
