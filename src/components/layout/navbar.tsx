@@ -1,14 +1,16 @@
 
 import Link from 'next/link';
-import { Glasses, ShoppingBag, Camera, BookOpenText, Menu } from 'lucide-react';
+import { Glasses, ShoppingBag, Menu, Home, Users, MapPin, Award, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { ModeToggle } from './mode-toggle';
 
 const navItems = [
-  { href: '/products', label: 'Products', icon: <ShoppingBag className="h-4 w-4" /> },
-  { href: '/virtual-try-on', label: 'Virtual Try-On', icon: <Camera className="h-4 w-4" /> },
-  { href: '/lookbooks', label: 'Lookbooks', icon: <BookOpenText className="h-4 w-4" /> },
+  { href: '/', label: 'HOME', icon: <Home className="h-4 w-4" /> },
+  { href: '/products', label: 'SHOP', icon: <ShoppingBag className="h-4 w-4" /> },
+  { href: '/about', label: 'ABOUT', icon: <Users className="h-4 w-4" /> },
+  { href: '/contact', label: 'LOCATION', icon: <MapPin className="h-4 w-4" /> },
+  { href: '/about#why-us', label: 'WHY US', icon: <Award className="h-4 w-4" /> } // Linking to about page, potentially a section
 ];
 
 export default function Navbar() {
@@ -20,12 +22,12 @@ export default function Navbar() {
           <span className="text-foreground dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">EYENISA</span>
         </Link>
         
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium">
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-foreground dark:text-white/90 transition-colors hover:text-primary dark:hover:text-white flex items-center gap-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
+              className="text-foreground dark:text-white/90 transition-colors hover:text-primary dark:hover:text-primary flex items-center gap-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
             >
               {item.icon}
               {item.label}
@@ -34,10 +36,18 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <Link 
+            href="/cart" 
+            className="p-2 text-foreground dark:text-white/90 transition-colors hover:text-primary dark:hover:text-primary drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
+            aria-label="View shopping cart"
+          >
+            <ShoppingCart className="h-5 w-5" />
+            <span className="sr-only">Cart</span>
+          </Link>
           <ModeToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="md:hidden bg-background/80 hover:bg-background">
+              <Button variant="ghost" size="icon" className="md:hidden hover:bg-background/80 text-foreground dark:text-white">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
@@ -58,6 +68,13 @@ export default function Navbar() {
                     {item.label}
                   </Link>
                 ))}
+                 <Link
+                    href="/cart"
+                    className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                  >
+                    <ShoppingCart className="h-5 w-5" />
+                    Cart
+                  </Link>
               </nav>
             </SheetContent>
           </Sheet>
