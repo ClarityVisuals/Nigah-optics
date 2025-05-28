@@ -21,7 +21,7 @@ export default function HomePage() {
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 opacity-100"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
@@ -43,12 +43,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Products Section */}
+      {/* SHOP Section (formerly Featured Products) */}
       <div className="container mx-auto px-4">
         <section className="py-16 bg-background">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-semibold">Featured Products</h2>
-            <Button variant="link" asChild className="text-primary hover:text-accent">
+          <div className="flex flex-col items-center mb-8">
+            <h2 className="text-3xl font-semibold">SHOP</h2>
+            <Button variant="link" asChild className="text-primary hover:text-accent mt-2">
               <Link href="/products">
                 View All <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
