@@ -15,20 +15,26 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      {/* Adjusted min-height to screen height, image opacity removed, content padding managed by layout */}
       <section className="relative min-h-screen flex items-center justify-center text-center">
         <Image
           src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0" 
+          className="absolute inset-0 z-0"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        {/* Content within the hero section is removed */}
-        <div className="relative z-10 max-w-3xl mx-auto text-white p-8 sm:p-12 md:p-16">
-          {/* All text and buttons previously here are now removed */}
+        <div className="relative z-10 max-w-3xl mx-auto text-white p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center h-full">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-md">
+            CLARITY
+          </h1>
+          <p className="text-lg md:text-xl mb-10 max-w-xl drop-shadow-sm">
+            Discover your perfect vision with our curated collection of stylish eyewear. Quality frames, exceptional lenses, and a new way to see the world.
+          </p>
+          <Button asChild size="lg" className="px-10 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-lg transition-transform hover:scale-105">
+            <Link href="/products">SHOP NOW</Link>
+          </Button>
         </div>
       </section>
 
