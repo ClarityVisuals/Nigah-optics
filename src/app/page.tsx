@@ -30,13 +30,13 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-md">
+          <h1 className="text-[3.15rem] md:text-[4.725rem] font-bold mb-4 drop-shadow-md">
             CLARITY
           </h1>
-          <p className="text-sm md:text-base mb-10 max-w-xl drop-shadow-sm">
+          <p className="text-[0.91875rem] md:text-[1.05rem] mb-10 max-w-xl drop-shadow-sm">
             Discover your perfect vision with our curated collection of stylish eyewear. Quality frames, exceptional lenses, and a new way to see the world.
           </p>
-          <Button asChild size="lg" className="px-10 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-lg transition-transform hover:scale-105">
+          <Button asChild size="lg" className="px-10 py-6 text-[1.18125rem] font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-lg transition-transform hover:scale-105">
             <Link href="/products">SHOP NOW</Link>
           </Button>
         </div>
