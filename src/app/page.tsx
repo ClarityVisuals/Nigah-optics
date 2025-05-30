@@ -13,7 +13,7 @@ export default function HomePage() {
     {
       title: "Men Glasses",
       href: "/products?category=men", 
-      imageSrc: "https://placehold.co/400x500.png", // Adjusted aspect ratio for placeholder
+      imageSrc: "https://placehold.co/400x500.png", // Fixed invalid URL
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
