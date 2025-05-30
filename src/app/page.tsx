@@ -59,7 +59,6 @@ export default function HomePage() {
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        {/* Content */}
         <div className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
           <h1 className="text-[3.15rem] md:text-[4.725rem] font-bold mb-4 drop-shadow-md">
             <span>ClearView</span><br />
@@ -200,7 +199,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Column: Featured Testimonial */}
-          <div className="bg-foreground text-primary-foreground p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center">
+          <div className="bg-foreground text-primary-foreground p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center min-h-[300px] md:min-h-0">
             <div className="flex mb-4">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-6 w-6 text-yellow-400 fill-yellow-400" />
@@ -212,18 +211,16 @@ export default function HomePage() {
             <div className="mb-4">
               <Image
                 src="https://placehold.co/100x100.png"
-                alt="Customer Avatar - James Edwards"
+                alt="Customer Avatar - Abdul Rafay"
                 width={80}
                 height={80}
                 className="rounded-full mx-auto border-2 border-background shadow-md"
                 data-ai-hint="customer avatar person"
               />
             </div>
-            <p className="font-semibold text-lg">James Edwards</p>
-            <p className="text-xs uppercase tracking-wider text-accent mb-6"> {/* Using accent for title */}
-              BUSINESS OWNER
-            </p>
-            <p className="text-sm leading-relaxed max-w-md">
+            <p className="font-semibold text-lg">Abdul Rafay</p>
+            {/* Business owner title removed */}
+            <p className="text-sm leading-relaxed max-w-md mt-2"> {/* Added mt-2 for spacing after removing title */}
               "Laoreet scelerisque euismod egestas suspendisse aliquet amet ultrices faucibus mauris sito diattis morbi suspendisse pellentesque pulvinar interdum justo suspendisse."
             </p>
           </div>
