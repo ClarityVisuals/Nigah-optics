@@ -2,12 +2,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { getFeaturedProducts } from '@/data/products'; 
-import ProductCard from '@/components/product-card'; 
-import { ChevronRight, Eye, ShoppingBag, TrendingUp } from 'lucide-react'; 
+import { getFeaturedProducts } from '@/data/products';
+import ProductCard from '@/components/product-card';
+import { ChevronRight, Eye, ShoppingBag, TrendingUp, UserCheck } from 'lucide-react';
 
 export default function HomePage() {
-  const popularProducts = getFeaturedProducts(4); 
+  const popularProducts = getFeaturedProducts(4);
 
   const categories = [
     {
@@ -59,8 +59,8 @@ export default function HomePage() {
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        {/* Overlay to darken the image for text visibility */}
-        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        {/* Overlay to darken the image for text visibility if needed, currently not applied */}
+        {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */}
 
         {/* Content */}
         <div className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
@@ -146,8 +146,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section className="bg-background"> {/* Use background for the overall section to allow image to be edge-to-edge */}
+        <div className="md:grid md:grid-cols-2 items-stretch"> {/* items-stretch ensures columns are same height if content differs */}
+          <div className="relative min-h-[300px] md:min-h-0"> {/* min-h for mobile, md:min-h-0 to let grid control height */}
+            <Image
+              src="https://placehold.co/800x600.png"
+              alt="Woman wearing stylish glasses in a city scene"
+              fill
+              className="object-cover w-full h-full"
+              data-ai-hint="woman glasses city"
+            />
+          </div>
+          <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+            <div className="mb-4">
+              <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded">
+                ABOUT
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              We Make Quality<br />
+              Glasses For Everyone.
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              EYENISA is dedicated to providing high-quality, stylish eyewear for everyone. We believe that clear vision and great style go hand-in-hand. Our curated collections feature a wide range of frames to suit every taste and need, from timeless classics to the latest trends.
+            </p>
+            <Button asChild variant="outline" size="lg" className="self-start border-foreground text-foreground hover:bg-foreground/10">
+              <Link href="/about">
+                Learn More <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action - Example: Newsletter Signup or Special Offer */}
-      <section className="bg-background py-16"> {/* Changed to bg-background for alternating feel */}
+      <section className="bg-background py-16">
         <div className="container mx-auto px-4 text-center">
           <Eye className="h-12 w-12 text-accent mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">Stay In Style</h2>
@@ -158,7 +192,7 @@ export default function HomePage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base bg-background" // ensure input bg matches section bg
+              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base bg-background"
               aria-label="Email for newsletter"
             />
             <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
