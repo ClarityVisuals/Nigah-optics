@@ -4,44 +4,47 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import LookbookCard from '@/components/lookbook-card';
 import { getFeaturedLookbooks } from '@/data/lookbooks';
-import { ChevronRight, Eye, ShoppingBag } from 'lucide-react';
+import { getFeaturedProducts } from '@/data/products'; // Import getFeaturedProducts
+import ProductCard from '@/components/product-card'; // Import ProductCard
+import { ChevronRight, Eye, ShoppingBag, TrendingUp } from 'lucide-react'; // Added TrendingUp
 
 export default function HomePage() {
   const featuredLookbooks = getFeaturedLookbooks(2);
+  const popularProducts = getFeaturedProducts(4); // Get 4 popular products
 
   const categories = [
     {
       title: "Men Glasses",
       href: "/products?category=men",
-      imageSrc: "https://placehold.co/400x500.png", // Corrected this line
+      imageSrc: "/images/image_2025-05-28_154951743.png",
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
     {
       title: "Women Glasses",
       href: "/products?category=women",
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "/images/women glasses.PNG",
       imageAlt: "Collection of women's glasses",
       aiHint: "women eyeglasses model",
     },
     {
       title: "Kids Glasses",
       href: "/products?category=kids",
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "/images/kiddo in glasses.PNG",
       imageAlt: "Collection of kids' glasses",
       aiHint: "kids eyeglasses fun",
     },
     {
       title: "Sun Glasses",
       href: "/products?category=sunglasses",
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "/images/sun glasses.jpg",
       imageAlt: "Collection of sunglasses",
       aiHint: "sunglasses fashion",
     },
     {
       title: "Lenses",
       href: "/products?category=lenses",
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "/images/lenses.jpg",
       imageAlt: "Close-up of optical lenses",
       aiHint: "prescription lenses detail",
     },
@@ -52,7 +55,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
-          src="https://placehold.co/1600x900.png"
+          src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
           fill
           className="absolute inset-0 z-0 object-cover"
@@ -77,7 +80,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Shop Our Collection Section */}
+      {/* Shop Our Collection Section (Categories) */}
       <div className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center mb-12">
@@ -123,8 +126,31 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Popular Products Section */}
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center mb-12">
+            <TrendingUp className="h-12 w-12 text-primary mb-4" />
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-3">Popular Products</h2>
+            <p className="text-muted-foreground max-w-xl">Check out some of our best-selling items that customers love!</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {popularProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+           <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary px-8 py-3 text-base">
+              <Link href="/products">
+                View All Products <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Visual Lookbooks Section */}
-      <div className="py-16 bg-card">
+      <div className="py-16 bg-background"> {/* Changed to bg-background for alternating feel */}
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center mb-10 text-center md:text-left">
             <div className="mb-6 md:mb-0">
@@ -146,7 +172,7 @@ export default function HomePage() {
       </div>
 
       {/* Call to Action - Example: Newsletter Signup or Special Offer */}
-      <section className="bg-background py-16">
+      <section className="bg-card py-16"> {/* Changed to bg-card for alternating feel */}
         <div className="container mx-auto px-4 text-center">
           <Eye className="h-12 w-12 text-accent mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">Stay In Style</h2>
@@ -157,7 +183,7 @@ export default function HomePage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base"
+              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base bg-background"
               aria-label="Email for newsletter"
             />
             <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
