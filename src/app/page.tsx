@@ -2,15 +2,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import LookbookCard from '@/components/lookbook-card';
-import { getFeaturedLookbooks } from '@/data/lookbooks';
-import { getFeaturedProducts } from '@/data/products'; // Import getFeaturedProducts
-import ProductCard from '@/components/product-card'; // Import ProductCard
-import { ChevronRight, Eye, ShoppingBag, TrendingUp } from 'lucide-react'; // Added TrendingUp
+import { getFeaturedProducts } from '@/data/products'; 
+import ProductCard from '@/components/product-card'; 
+import { ChevronRight, Eye, ShoppingBag, TrendingUp } from 'lucide-react'; 
 
 export default function HomePage() {
-  const featuredLookbooks = getFeaturedLookbooks(2);
-  const popularProducts = getFeaturedProducts(4); // Get 4 popular products
+  const popularProducts = getFeaturedProducts(4); 
 
   const categories = [
     {
@@ -149,30 +146,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Visual Lookbooks Section */}
-      <div className="py-16 bg-background"> {/* Changed to bg-background for alternating feel */}
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-10 text-center md:text-left">
-            <div className="mb-6 md:mb-0">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Discover Our Lookbooks</h2>
-              <p className="text-muted-foreground max-w-lg">Get inspired by our curated collections and see how our eyewear complements different styles.</p>
-            </div>
-            <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary/10 hover:text-primary px-6 py-3">
-              <Link href="/lookbooks">
-                Explore Lookbooks <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {featuredLookbooks.map((lookbook) => (
-              <LookbookCard key={lookbook.id} lookbook={lookbook} />
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Call to Action - Example: Newsletter Signup or Special Offer */}
-      <section className="bg-card py-16"> {/* Changed to bg-card for alternating feel */}
+      <section className="bg-background py-16"> {/* Changed to bg-background for alternating feel */}
         <div className="container mx-auto px-4 text-center">
           <Eye className="h-12 w-12 text-accent mx-auto mb-4" />
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-primary">Stay In Style</h2>
@@ -183,7 +158,7 @@ export default function HomePage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base bg-background"
+              className="flex-grow p-3 border border-input rounded-md focus:ring-2 focus:ring-primary outline-none text-base bg-background" // ensure input bg matches section bg
               aria-label="Email for newsletter"
             />
             <Button type="submit" size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
