@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import LookbookCard from '@/components/lookbook-card';
 import { getFeaturedLookbooks } from '@/data/lookbooks';
-import { ChevronRight, Eye, ShoppingBag } from 'lucide-react'; 
+import { ChevronRight, Eye, ShoppingBag } from 'lucide-react';
 
 export default function HomePage() {
   const featuredLookbooks = getFeaturedLookbooks(2);
@@ -12,15 +12,15 @@ export default function HomePage() {
   const categories = [
     {
       title: "Men Glasses",
-      href: "/products?category=men", 
-      imageSrc: "https://placehold.co/400x500.png", 
+      href: "/products?category=men",
+      imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
     {
       title: "Women Glasses",
-      href: "/products?category=women", 
-      imageSrc: "https://placehold.co/400x500.png", 
+      href: "/products?category=women",
+      imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Collection of women's glasses",
       aiHint: "women eyeglasses model",
     },
@@ -33,7 +33,7 @@ export default function HomePage() {
     },
     {
       title: "Sun Glasses",
-      href: "/products?category=sunglasses", 
+      href: "/products?category=sunglasses",
       imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Collection of sunglasses",
       aiHint: "sunglasses fashion",
@@ -54,8 +54,8 @@ export default function HomePage() {
         <Image
           src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
-          fill 
-          objectFit="cover" 
+          fill
+          objectFit="cover"
           className="absolute inset-0 z-0"
           data-ai-hint="fashion model eyeglasses"
           priority
@@ -90,13 +90,13 @@ export default function HomePage() {
               </Link>
             </Button>
           </div>
-          
+
           {/* Categories Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
             {categories.map((category) => (
-              <Link 
-                key={category.title} 
-                href={category.href} 
+              <Link
+                key={category.title}
+                href={category.href}
                 className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="relative aspect-[4/5] w-full">
