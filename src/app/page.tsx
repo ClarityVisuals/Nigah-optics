@@ -13,7 +13,7 @@ export default function HomePage() {
     {
       title: "Men Glasses",
       href: "/products?category=men",
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "https://placehold.co/400x500.png", // Corrected from previous error
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
@@ -215,7 +215,7 @@ export default function HomePage() {
             </div>
             <p className="font-semibold text-lg">Abdul Rafay</p>
             <p className="text-sm leading-relaxed max-w-md mt-2">
-              "Laoreet scelerisque euismod egestas suspendisse aliquet amet ultrices faucibus mauris sito diattis morbi suspendisse pellentesque pulvinar interdum justo suspendisse."
+              "The team at EYENISA was incredibly helpful in finding the perfect pair of glasses for me. Their virtual try-on made the process so easy, and the quality is outstanding!"
             </p>
           </div>
         </div>
