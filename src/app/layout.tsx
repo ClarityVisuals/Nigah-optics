@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased flex flex-col min-h-screen`}>
         <Navbar />
         {/* Added pt-16 to account for fixed h-16 navbar */}
-        <main className="flex-grow pt-16"> 
+        <main className="flex-grow pt-16">
           {children}
         </main>
         <Footer />
