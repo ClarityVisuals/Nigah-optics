@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import LookbookCard from '@/components/lookbook-card';
 import { getFeaturedLookbooks } from '@/data/lookbooks';
-import { ChevronRight, Eye, ShoppingBag, User, Users, Glasses as GlassesIcon, Sparkles } from 'lucide-react'; 
+import { ChevronRight, Eye, ShoppingBag } from 'lucide-react'; 
 
 export default function HomePage() {
   const featuredLookbooks = getFeaturedLookbooks(2);
@@ -13,16 +13,23 @@ export default function HomePage() {
     {
       title: "Men Glasses",
       href: "/products?category=men", 
-      imageSrc: "https://placehold.co/400x500.png", // Fixed invalid URL
+      imageSrc: "https://placehold.co/400x500.png", 
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
     {
       title: "Women Glasses",
       href: "/products?category=women", 
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "https://placehold.co/400x500.png", 
       imageAlt: "Collection of women's glasses",
       aiHint: "women eyeglasses model",
+    },
+    {
+      title: "Kids Glasses",
+      href: "/products?category=kids",
+      imageSrc: "https://placehold.co/400x500.png",
+      imageAlt: "Collection of kids' glasses",
+      aiHint: "kids eyeglasses fun",
     },
     {
       title: "Sun Glasses",
@@ -33,7 +40,7 @@ export default function HomePage() {
     },
     {
       title: "Lenses",
-      href: "/products?category=lenses", 
+      href: "/products?category=lenses",
       imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Close-up of optical lenses",
       aiHint: "prescription lenses detail",
@@ -45,7 +52,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
-          src="/images/website image 1.png"
+          src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
           fill 
           objectFit="cover" 
@@ -71,7 +78,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SHOP Section */}
+      {/* Shop Our Collection Section */}
       <div className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center mb-12">
@@ -85,15 +92,19 @@ export default function HomePage() {
           </div>
           
           {/* Categories Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
             {categories.map((category) => (
-              <Link key={category.title} href={category.href} className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="relative aspect-[4/5] w-full"> {/* Adjusted aspect ratio closer to example */}
+              <Link 
+                key={category.title} 
+                href={category.href} 
+                className="group block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="relative aspect-[4/5] w-full">
                   <Image
                     src={category.imageSrc}
                     alt={category.imageAlt}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     data-ai-hint={category.aiHint}
                   />
