@@ -30,11 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased flex flex-col min-h-screen`}>
         <Navbar />
-        {/* Added pt-16 to account for fixed h-16 navbar */}
-        <main className="flex-grow pt-16">
+        {/* Removed pt-16 as navbar is not fixed anymore, or hero is handling its own offset */}
+        <main className="flex-grow"> {/* Removed pt-16, main container doesn't need global padding */}
           {children}
         </main>
         <Footer />

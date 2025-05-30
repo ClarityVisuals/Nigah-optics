@@ -16,7 +16,7 @@ export default function HomePage() {
     {
       title: "Men Glasses",
       href: "/products?category=men",
-      imageSrc: "/images/image_2025-05-28_154951743.png",
+      imageSrc: "https://placehold.co/400x500.png",
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
@@ -55,7 +55,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
-          src="/images/website image 1.png"
+          src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
           fill
           className="absolute inset-0 z-0 object-cover"
@@ -81,7 +81,7 @@ export default function HomePage() {
       </section>
 
       {/* Shop Our Collection Section (Categories) */}
-      <div className="py-16 bg-background">
+      <div id="shop-our-collection-section" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center text-center mb-12">
             <ShoppingBag className="h-12 w-12 text-primary mb-4" />
@@ -141,9 +141,9 @@ export default function HomePage() {
           </div>
            <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary px-8 py-3 text-base">
-              <Link href="/products">
+              <a href="#shop-our-collection-section">
                 View All Products <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
