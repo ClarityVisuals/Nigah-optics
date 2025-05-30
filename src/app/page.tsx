@@ -193,7 +193,7 @@ export default function HomePage() {
             {/* View All button removed as per request */}
           </div>
 
-          {/* Right Column: Can be a relevant image or kept as a contrasting panel. Currently shows a testimonial. */}
+          {/* Right Column: Testimonial */}
           <div className="bg-foreground text-primary-foreground p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center min-h-[300px] md:min-h-0">
             <div className="flex mb-4">
               {[...Array(5)].map((_, i) => (
