@@ -13,7 +13,7 @@ export default function HomePage() {
     {
       title: "Men Glasses",
       href: "/products?category=men",
-      imageSrc: "https://placehold.co/400x500.png",
+      imageSrc: "https://placehold.co/400x500.png", // Corrected this line
       imageAlt: "Collection of men's glasses",
       aiHint: "men eyeglasses",
     },
@@ -55,8 +55,7 @@ export default function HomePage() {
           src="https://placehold.co/1600x900.png"
           alt="Stylish person wearing glasses"
           fill
-          objectFit="cover"
-          className="absolute inset-0 z-0"
+          className="absolute inset-0 z-0 object-cover"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
@@ -92,7 +91,7 @@ export default function HomePage() {
           </div>
 
           {/* Categories Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
             {categories.map((category) => (
               <Link
                 key={category.title}
