@@ -176,29 +176,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Why Choose Us Section (Previously Testimonials) */}
       <section> {/* No top margin to connect with section above */}
         <div className="md:grid md:grid-cols-2 items-stretch">
-          {/* Left Column: Testimonial Intro */}
+          {/* Left Column: Why Choose Us Intro */}
           <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-sm mb-4 self-start">
-              TESTIMONIALS
+              WHY US
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              What Customers<br />
-              Are Saying
+              Why Choose Us?
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Laoreet scelerisque euismod egestas suspendisse aliquet suspendisse mus ut pellentesque at pulvinar. Interdum justo suspendisse porttitor.
+              At EYENISA, we're committed to providing not just eyewear, but a seamless and delightful experience. From our curated selection of high-quality frames to our expert advice and cutting-edge virtual try-on technology, discover why thousands choose us for their vision needs.
             </p>
-            <Button asChild variant="outline" size="lg" className="self-start border-foreground text-foreground hover:bg-foreground/10">
-              <Link href="/reviews"> {/* Hypothetical reviews page */}
-                View All <ChevronRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            {/* View All button removed as per request */}
           </div>
 
-          {/* Right Column: Featured Testimonial */}
+          {/* Right Column: Can be a relevant image or kept as a contrasting panel. Currently shows a testimonial. */}
           <div className="bg-foreground text-primary-foreground p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center min-h-[300px] md:min-h-0">
             <div className="flex mb-4">
               {[...Array(5)].map((_, i) => (
@@ -219,8 +214,7 @@ export default function HomePage() {
               />
             </div>
             <p className="font-semibold text-lg">Abdul Rafay</p>
-            {/* Business owner title removed */}
-            <p className="text-sm leading-relaxed max-w-md mt-2"> {/* Added mt-2 for spacing after removing title */}
+            <p className="text-sm leading-relaxed max-w-md mt-2">
               "Laoreet scelerisque euismod egestas suspendisse aliquet amet ultrices faucibus mauris sito diattis morbi suspendisse pellentesque pulvinar interdum justo suspendisse."
             </p>
           </div>
