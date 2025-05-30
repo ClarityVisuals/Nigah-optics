@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { getFeaturedProducts } from '@/data/products';
 import ProductCard from '@/components/product-card';
-import { ChevronRight, Eye, ShoppingBag, TrendingUp, UserCheck } from 'lucide-react';
+import { ChevronRight, Eye, ShoppingBag, TrendingUp, UserCheck, Star } from 'lucide-react';
 
 export default function HomePage() {
   const popularProducts = getFeaturedProducts(4);
@@ -59,9 +59,6 @@ export default function HomePage() {
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        {/* Overlay to darken the image for text visibility if needed, currently not applied */}
-        {/* <div className="absolute inset-0 bg-black/30 z-0"></div> */}
-
         {/* Content */}
         <div className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
           <h1 className="text-[3.15rem] md:text-[4.725rem] font-bold mb-4 drop-shadow-md">
@@ -147,9 +144,9 @@ export default function HomePage() {
       </section>
 
       {/* About Us Section */}
-      <section className="bg-background"> {/* Use background for the overall section to allow image to be edge-to-edge */}
-        <div className="md:grid md:grid-cols-2 items-stretch"> {/* items-stretch ensures columns are same height if content differs */}
-          <div className="relative min-h-[300px] md:min-h-0"> {/* min-h for mobile, md:min-h-0 to let grid control height */}
+      <section className="bg-background">
+        <div className="md:grid md:grid-cols-2 items-stretch">
+          <div className="relative min-h-[300px] md:min-h-0">
             <Image
               src="https://placehold.co/800x600.png"
               alt="Woman wearing stylish glasses in a city scene"
@@ -160,7 +157,7 @@ export default function HomePage() {
           </div>
           <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
             <div className="mb-4">
-              <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded">
+              <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-sm">
                 ABOUT
               </span>
             </div>
@@ -176,6 +173,59 @@ export default function HomePage() {
                 Learn More <ChevronRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section> {/* No top margin to connect with section above */}
+        <div className="md:grid md:grid-cols-2 items-stretch">
+          {/* Left Column: Testimonial Intro */}
+          <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+            <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-sm mb-4 self-start">
+              TESTIMONIALS
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              What Customers<br />
+              Are Saying
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Laoreet scelerisque euismod egestas suspendisse aliquet suspendisse mus ut pellentesque at pulvinar. Interdum justo suspendisse porttitor.
+            </p>
+            <Button asChild variant="outline" size="lg" className="self-start border-foreground text-foreground hover:bg-foreground/10">
+              <Link href="/reviews"> {/* Hypothetical reviews page */}
+                View All <ChevronRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+
+          {/* Right Column: Featured Testimonial */}
+          <div className="bg-foreground text-primary-foreground p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center">
+            <div className="flex mb-4">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-6 w-6 text-yellow-400 fill-yellow-400" />
+              ))}
+            </div>
+            <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+              Great Customer Service!
+            </h3>
+            <div className="mb-4">
+              <Image
+                src="https://placehold.co/100x100.png"
+                alt="Customer Avatar - James Edwards"
+                width={80}
+                height={80}
+                className="rounded-full mx-auto border-2 border-background shadow-md"
+                data-ai-hint="customer avatar person"
+              />
+            </div>
+            <p className="font-semibold text-lg">James Edwards</p>
+            <p className="text-xs uppercase tracking-wider text-accent mb-6"> {/* Using accent for title */}
+              BUSINESS OWNER
+            </p>
+            <p className="text-sm leading-relaxed max-w-md">
+              "Laoreet scelerisque euismod egestas suspendisse aliquet amet ultrices faucibus mauris sito diattis morbi suspendisse pellentesque pulvinar interdum justo suspendisse."
+            </p>
           </div>
         </div>
       </section>
