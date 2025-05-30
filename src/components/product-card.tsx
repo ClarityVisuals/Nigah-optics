@@ -37,7 +37,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.description.substring(0, 70)}{product.description.length > 70 ? '...' : ''}
         </p>
         <div className="flex items-center justify-between mb-2">
-          <p className="text-xl font-bold text-primary">${product.price.toFixed(2)}</p>
+          <p className="text-xl font-bold text-primary">PKR {product.price.toFixed(2)}</p>
           {product.rating && (
             <Badge variant="outline" className="flex items-center gap-1">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-500" />

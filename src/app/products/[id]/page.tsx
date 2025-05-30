@@ -150,7 +150,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           <h1 className="text-3xl lg:text-4xl font-bold text-primary">{product.name}</h1>
           
           <div className="flex items-center space-x-4">
-            <p className="text-3xl font-extrabold text-foreground">${product.price.toFixed(2)}</p>
+            <p className="text-3xl font-extrabold text-foreground">PKR {product.price.toFixed(2)}</p>
             {product.rating && (
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (

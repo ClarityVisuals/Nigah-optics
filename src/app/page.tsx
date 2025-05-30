@@ -52,7 +52,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
-          src="https://placehold.co/1600x900.png"
+          src="/images/website image 1.png"
           alt="Stylish person wearing glasses"
           fill
           className="absolute inset-0 z-0 object-cover"
