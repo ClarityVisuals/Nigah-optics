@@ -1,6 +1,9 @@
 
 import type { Product } from '@/types';
 
+const universalProductImage = '/images/image_2025-05-31_213230895.png';
+const secondaryPlaceholderImage = 'https://placehold.co/600x400.png?text=Product+Angle+2';
+
 export const mockProducts: Product[] = [
   {
     id: '1',
@@ -8,8 +11,8 @@ export const mockProducts: Product[] = [
     description: 'Timeless aviator sunglasses with a sleek metal frame. Perfect for any occasion, offering 100% UV protection and superior comfort.',
     price: 100,
     images: [
-        'https://placehold.co/600x400.png?text=Classic+Aviators+1',
-        'https://placehold.co/600x400.png?text=Classic+Aviators+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Aviators+Side',
     ],
     style: 'Aviator',
     frameMaterial: 'Metal',
@@ -27,8 +30,8 @@ export const mockProducts: Product[] = [
     description: 'A modern take on the iconic wayfarer style. Crafted from durable acetate with polarized lenses for enhanced clarity. These sunglasses offer a versatile look that suits various face shapes and outfits, making them a staple for casual and semi-formal settings.',
     price: 149.50,
     images: [
-        '/images/image_2025-05-31_213230895.png', // Updated to user's image
-        'https://placehold.co/600x400.png?text=Modern+Wayfarers+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Wayfarers+Side'
     ],
     style: 'Wayfarer',
     frameMaterial: 'Acetate',
@@ -46,8 +49,8 @@ export const mockProducts: Product[] = [
     description: 'Experience sophisticated simplicity with our ultra-lightweight round eyeglasses, meticulously crafted from high-quality titanium. Designed for enduring comfort and a subtle, elegant presence, these frames are perfect for daily wear, blending seamless style with practical durability.',
     price: 199.00,
     images: [
-        'https://placehold.co/600x400.png?text=Minimalist+Round+1',
-        'https://placehold.co/600x400.png?text=Minimalist+Round+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Round+Side'
     ],
     style: 'Round',
     frameMaterial: 'Titanium',
@@ -65,8 +68,8 @@ export const mockProducts: Product[] = [
     description: 'Elevate your style with our chic cat-eye frames, designed to infuse your look with a touch of retro glamour and playful sophistication. Available in an array of vibrant colors, these glasses are crafted to highlight your features and express your unique personality.',
     price: 175.00,
     images: [
-        'https://placehold.co/600x400.png?text=Chic+Cat-Eye+1',
-        'https://placehold.co/600x400.png?text=Chic+Cat-Eye+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Cat-Eye+Side'
     ],
     style: 'Cat-Eye',
     frameMaterial: 'Acetate',
@@ -84,8 +87,8 @@ export const mockProducts: Product[] = [
     description: 'Stay ahead of the game with our sporty square sunglasses, engineered for peak performance and durability during active pursuits. Featuring impact-resistant lenses and a secure, comfortable fit, these sunglasses are your ideal companion for any outdoor adventure, providing clear vision and robust protection.',
     price: 160.00,
     images: [
-        'https://placehold.co/600x400.png?text=Sporty+Square+1',
-        'https://placehold.co/600x400.png?text=Sporty+Square+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Sporty+Square+Side'
     ],
     style: 'Square',
     frameMaterial: 'Plastic',
@@ -103,8 +106,8 @@ export const mockProducts: Product[] = [
     description: 'Experience unparalleled comfort and clarity with our ultra-lightweight rimless reading glasses. Designed for extended reading sessions, their minimalist design and superior lenses reduce eye strain, making them perfect for diving into your favorite books or detailed tasks.',
     price: 89.99,
     images: [
-        'https://placehold.co/600x400.png?text=Rimless+Reading+1',
-        'https://placehold.co/600x400.png?text=Rimless+Reading+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Rimless+Side'
     ],
     style: 'Rimless',
     frameMaterial: 'Metal',
@@ -122,8 +125,8 @@ export const mockProducts: Product[] = [
     description: 'Make a statement with these bold square eyeglasses. Their thick frames and distinct shape offer a modern and confident look.',
     price: 210.00,
     images: [
-        'https://placehold.co/600x400.png?text=Bold+Square+1',
-        'https://placehold.co/600x400.png?text=Bold+Square+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Bold+Square+Side'
     ],
     style: 'Square',
     frameMaterial: 'Acetate',
@@ -141,8 +144,8 @@ export const mockProducts: Product[] = [
     description: 'A variation on the classic aviator, featuring a slightly more angular shape. Offers excellent coverage and UV protection.',
     price: 120.00,
     images: [
-        'https://placehold.co/600x400.png?text=Pilot+Style+1',
-        'https://placehold.co/600x400.png?text=Pilot+Style+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Pilot+Style+Side'
     ],
     style: 'Pilot',
     frameMaterial: 'Metal',
@@ -160,8 +163,8 @@ export const mockProducts: Product[] = [
     description: 'Uniquely shaped geometric frames that add an artistic touch to your look. Lightweight and comfortable for all-day wear.',
     price: 185.00,
     images: [
-        'https://placehold.co/600x400.png?text=Geometric+Eyeglasses+1',
-        'https://placehold.co/600x400.png?text=Geometric+Eyeglasses+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Geometric+Side'
     ],
     style: 'Geometric',
     frameMaterial: 'Metal',
@@ -179,8 +182,8 @@ export const mockProducts: Product[] = [
     description: 'Make a fashion statement with these oversized sunglasses. Providing maximum sun protection and a glamorous look.',
     price: 155.00,
     images: [
-        'https://placehold.co/600x400.png?text=Oversized+Sunglasses+1',
-        'https://placehold.co/600x400.png?text=Oversized+Sunglasses+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Oversized+Side'
     ],
     style: 'Oversized',
     frameMaterial: 'Plastic',
@@ -198,8 +201,8 @@ export const mockProducts: Product[] = [
     description: 'Fun and durable eyeglasses for kids featuring playful animal designs on the temples. Made with flexible materials for comfort and safety.',
     price: 75.00,
     images: [
-        '/images/kiddo in glasses.PNG',
-        'https://placehold.co/600x400.png?text=Kids+Animal+Frames+2'
+        universalProductImage, // Use the universal image
+        '/images/kiddo in glasses.PNG' // Keep the specific kid's image as secondary if desired, or use secondaryPlaceholderImage
     ],
     style: 'Animal',
     frameMaterial: 'Flexible Plastic',
@@ -217,8 +220,8 @@ export const mockProducts: Product[] = [
     description: 'These lenses automatically adjust from clear indoors to dark outdoors, providing convenience and protection in varying light conditions.',
     price: 250.00,
     images: [
-        'https://placehold.co/600x400.png?text=Transition+Lenses+1',
-         'https://placehold.co/600x400.png?text=Transition+Lenses+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Transition+Side'
     ],
     style: 'Lenses',
     frameMaterial: 'N/A',
@@ -236,8 +239,8 @@ export const mockProducts: Product[] = [
     description: 'Replacement lenses with polarization to reduce glare from reflective surfaces like water and roads, improving visibility and comfort.',
     price: 80.00,
     images: [
-        'https://placehold.co/600x400.png?text=Polarized+Lenses+1',
-        'https://placehold.co/600x400.png?text=Polarized+Lenses+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Polarized+Lenses+Side'
     ],
     style: 'Lenses',
     frameMaterial: 'N/A',
@@ -255,8 +258,8 @@ export const mockProducts: Product[] = [
     description: 'A clear coating applied to lenses to eliminate reflections from the front and back surfaces, reducing eye strain and improving the clarity of vision.',
     price: 40.00,
     images: [
-        'https://placehold.co/600x400.png?text=AR+Coating+1',
-        'https://placehold.co/600x400.png?text=AR+Coating+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=AR+Coating+Detail'
     ],
     style: 'Accessory',
     frameMaterial: 'N/A',
@@ -274,8 +277,8 @@ export const mockProducts: Product[] = [
     description: 'Lenses designed to filter out harmful blue light emitted from digital screens, helping to reduce digital eye strain and improve sleep patterns.',
     price: 60.00,
     images: [
-        'https://placehold.co/600x400.png?text=Blue+Light+Filter+1',
-        'https://placehold.co/600x400.png?text=Blue+Light+Filter+2'
+        universalProductImage,
+        'https://placehold.co/600x400.png?text=Blue+Light+Filter+Detail'
     ],
     style: 'Lenses',
     frameMaterial: 'N/A',
@@ -293,8 +296,8 @@ export const mockProducts: Product[] = [
     description: 'Trendy and elegant glasses for women, featuring a unique frame design that combines modern style with classic comfort.',
     price: 180.00,
     images: [
-        '/images/women glasses.PNG',
-        'https://placehold.co/600x400.png?text=Stylish+Womens+Glasses+2'
+        universalProductImage, // Use the universal image
+        '/images/women glasses.PNG' // Keep the specific women's image as secondary, or use secondaryPlaceholderImage
     ],
     style: 'Fashion',
     frameMaterial: 'Acetate',
@@ -304,6 +307,7 @@ export const mockProducts: Product[] = [
     rating: 4.7,
     stock: 25,
     category: 'eyeglasses',
+    tags: ['fashion', 'elegant', 'women'],
   },
 ];
 
@@ -321,5 +325,7 @@ export const getPriceRange = (): [number, number] => {
   const prices = mockProducts.map(p => p.price);
   return [Math.min(...prices), Math.max(...prices)];
 };
+
+    
 
     
