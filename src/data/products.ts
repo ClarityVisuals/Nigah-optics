@@ -27,7 +27,7 @@ export const mockProducts: Product[] = [
     description: 'A modern take on the iconic wayfarer style. Crafted from durable acetate with polarized lenses for enhanced clarity. These sunglasses offer a versatile look that suits various face shapes and outfits, making them a staple for casual and semi-formal settings.',
     price: 149.50,
     images: [
-        'https://placehold.co/600x400.png?text=Modern+Wayfarers+1',
+        '/images/image_2025-05-31_213230895.png', // Updated to user's image
         'https://placehold.co/600x400.png?text=Modern+Wayfarers+2'
     ],
     style: 'Wayfarer',
@@ -198,7 +198,7 @@ export const mockProducts: Product[] = [
     description: 'Fun and durable eyeglasses for kids featuring playful animal designs on the temples. Made with flexible materials for comfort and safety.',
     price: 75.00,
     images: [
-        '/images/kiddo in glasses.PNG', // Kept as it seems like an intentional local path
+        '/images/kiddo in glasses.PNG',
         'https://placehold.co/600x400.png?text=Kids+Animal+Frames+2'
     ],
     style: 'Animal',
@@ -293,7 +293,7 @@ export const mockProducts: Product[] = [
     description: 'Trendy and elegant glasses for women, featuring a unique frame design that combines modern style with classic comfort.',
     price: 180.00,
     images: [
-        '/images/women glasses.PNG', // Kept as it seems like an intentional local path
+        '/images/women glasses.PNG',
         'https://placehold.co/600x400.png?text=Stylish+Womens+Glasses+2'
     ],
     style: 'Fashion',
