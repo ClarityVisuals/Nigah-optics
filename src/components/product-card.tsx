@@ -1,10 +1,12 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/types';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'; // Removed CardTitle
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
+import ScrollFadeIn from './scroll-fade-in';
 
 interface ProductCardProps {
   product: Product;
@@ -29,31 +31,46 @@ export default function ProductCard({ product }: ProductCardProps) {
       </CardHeader>
       <CardContent className="p-4 flex-grow">
         <Link href={`/products/${product.id}`} className="hover:text-primary">
-          <CardTitle className="text-lg font-semibold mb-1 truncate" title={product.name}>
+          <ScrollFadeIn 
+            delay={50} 
+            as="div" 
+            className="text-lg font-semibold mb-1 truncate" // Classes for title
+            title={product.name}
+          >
             {product.name}
-          </CardTitle>
+          </ScrollFadeIn>
         </Link>
-        <p className="text-sm text-muted-foreground mb-2 h-10 overflow-hidden text-ellipsis">
+        <ScrollFadeIn 
+          delay={100} 
+          as="p" 
+          className="text-sm text-muted-foreground mb-2 h-10 overflow-hidden text-ellipsis" // Classes for description
+        >
           {product.description.substring(0, 70)}{product.description.length > 70 ? '...' : ''}
-        </p>
+        </ScrollFadeIn>
         <div className="flex items-center justify-between mb-2">
-          <p className="text-xl font-bold text-primary">PKR {product.price.toFixed(2)}</p>
+          <ScrollFadeIn delay={150} as="p" className="text-xl font-bold text-primary">
+            PKR {product.price.toFixed(2)}
+          </ScrollFadeIn>
           {product.rating && (
-            <Badge variant="outline" className="flex items-center gap-1">
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-500" />
-              {product.rating.toFixed(1)}
-            </Badge>
+            <ScrollFadeIn delay={200} as="div">
+              <Badge variant="outline" className="flex items-center gap-1">
+                <Star className="w-4 h-4 fill-yellow-400 text-yellow-500" />
+                {product.rating.toFixed(1)}
+              </Badge>
+            </ScrollFadeIn>
           )}
         </div>
-        <div className="flex flex-wrap gap-1 mb-2">
+        <ScrollFadeIn delay={250} as="div" className="flex flex-wrap gap-1 mb-2">
           <Badge variant="secondary">{product.style}</Badge>
           <Badge variant="secondary">{product.frameMaterial}</Badge>
-        </div>
+        </ScrollFadeIn>
       </CardContent>
       <CardFooter className="p-4 border-t">
-        <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
-          <Link href={`/products/${product.id}`}>View Details</Link>
-        </Button>
+        <ScrollFadeIn delay={300} as="div" className="w-full">
+          <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Link href={`/products/${product.id}`}>View Details</Link>
+          </Button>
+        </ScrollFadeIn>
       </CardFooter>
     </Card>
   );
