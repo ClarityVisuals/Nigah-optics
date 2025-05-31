@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { getFeaturedProducts } from '@/data/products';
 import ProductCard from '@/components/product-card';
 import { ChevronRight, Eye, ShoppingBag, TrendingUp, UserCheck, Star } from 'lucide-react';
+import HeroTextAnimation from '@/components/hero-text-animation'; // Import the new component
 
 export default function HomePage() {
   const popularProducts = getFeaturedProducts(4);
@@ -52,25 +53,20 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
-          src="/images/website image 1.png"
+          src="https://placehold.co/1920x1080.png"
           alt="Stylish person wearing glasses"
           fill
           className="absolute inset-0 z-0 object-cover"
           data-ai-hint="fashion model eyeglasses"
           priority
         />
-        <div className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
-          <h1 className="text-[3.15rem] md:text-[4.725rem] font-bold mb-4 drop-shadow-md">
-            <span>ClearView</span><br />
-            <span>EyeGlasses</span>
-          </h1>
-          <p className="text-[0.91875rem] md:text-[1.05rem] mb-10 max-w-xl drop-shadow-sm">
-            Discover your perfect vision with our curated collection of stylish eyewear. Quality frames, exceptional lenses, and a new way to see the world.
-          </p>
-          <Button asChild size="lg" className="px-10 py-6 text-[1.18125rem] font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg shadow-lg transition-transform hover:scale-105">
-            <Link href="/products">SHOP NOW</Link>
-          </Button>
-        </div>
+        <HeroTextAnimation
+          titleLine1="ClearView"
+          titleLine2="EyeGlasses"
+          description="Discover your perfect vision with our curated collection of stylish eyewear. Quality frames, exceptional lenses, and a new way to see the world."
+          buttonText="SHOP NOW"
+          buttonLink="/products"
+        />
       </section>
 
       {/* Shop Our Collection Section (Categories) */}
@@ -190,7 +186,6 @@ export default function HomePage() {
             <p className="text-muted-foreground mb-8 leading-relaxed">
               At EYENISA, we're committed to providing not just eyewear, but a seamless and delightful experience. From our curated selection of high-quality frames to our expert advice and cutting-edge virtual try-on technology, discover why thousands choose us for their vision needs.
             </p>
-            {/* View All button removed as per request */}
           </div>
 
           {/* Right Column: Testimonial */}
