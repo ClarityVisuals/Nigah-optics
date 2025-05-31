@@ -20,7 +20,12 @@ export default function HeroTextAnimation({ titleLine1, titleLine2, description,
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          // Optionally reset when out of view to re-trigger animation
+          setIsVisible(false); 
+        }
       },
       {
         threshold: 0.1, // Adjust this value to control when the animation triggers
@@ -40,9 +45,9 @@ export default function HeroTextAnimation({ titleLine1, titleLine2, description,
   }, []);
 
   const baseClasses = "transition-all transform ease-out";
-  const commonDuration = "duration-700";
+  const commonDuration = "duration-1000"; // Increased duration
   const visibleClasses = "opacity-100 translate-y-0";
-  const hiddenClasses = "opacity-0 translate-y-8"; // Elements start 32px lower
+  const hiddenClasses = "opacity-0 translate-y-12"; // Increased initial offset
 
   return (
     <div ref={sectionRef} className="relative z-10 max-w-2xl text-white p-6 sm:p-8 md:p-12 lg:p-16 flex flex-col items-start justify-center h-full">
@@ -77,3 +82,4 @@ export default function HeroTextAnimation({ titleLine1, titleLine2, description,
     </div>
   );
 }
+
