@@ -17,9 +17,11 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary">
-          <Glasses className="h-7 w-7" />
-          <span className="text-foreground dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">EYENISA</span>
+        <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
+          <Glasses className="h-7 w-7 text-primary" />
+          <div>
+            <span className="text-foreground dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">EYEN</span><span className="text-primary drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">ISA</span>
+          </div>
         </Link>
         
         <nav className="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium">
@@ -54,9 +56,11 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="bg-background">
               <nav className="grid gap-6 text-lg font-medium mt-8">
-                <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-primary mb-4">
-                  <Glasses className="h-7 w-7" />
-                  <span>EYENISA</span>
+                <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
+                  <Glasses className="h-7 w-7 text-primary" />
+                  <div>
+                    <span className="text-foreground dark:text-white">EYEN</span><span className="text-primary">ISA</span>
+                  </div>
                 </Link>
                 {navItems.map((item) => (
                   <Link
