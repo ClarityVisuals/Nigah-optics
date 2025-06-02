@@ -51,7 +51,7 @@ export default function HomePage() {
           alt="Hero section background"
           fill
           className="absolute inset-0 z-0 object-cover"
-          priority // Good for LCP
+          priority
           data-ai-hint="abstract modern background" 
         />
         <HeroTextAnimation
@@ -154,7 +154,7 @@ export default function HomePage() {
         <div className="md:grid md:grid-cols-2 items-stretch">
           <div className="relative min-h-[300px] md:min-h-0">
             <Image
-              src="/images/about us.jpeg"
+              src="/images/ABOUT US.PNG"
               alt="Stylish person wearing glasses standing in a city"
               fill
               className="object-cover w-full h-full"
