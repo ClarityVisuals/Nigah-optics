@@ -27,7 +27,7 @@ export default function AboutPage() {
         </div>
         <div className="rounded-lg overflow-hidden shadow-xl">
           <Image
-            src="https://placehold.co/600x400.png"
+            src="about us.jpeg"
             alt="EYENISA Team or Storefront"
             width={600}
             height={400}

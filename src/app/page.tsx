@@ -15,22 +15,22 @@ export default function HomePage() {
     {
       title: "Men Glasses",
       href: "/products?category=men",
-      imageSrc: "/images/image_2025-05-28_154951743.png", // Updated image source for Men Glasses
+      imageSrc: "/images/image_2025-05-28_154951743.png",
       imageAlt: "A close-up of a stylish pair of glasses on a light background.",
       aiHint: "men eyeglasses",
     },
     {
       title: "Women Glasses",
       href: "/products?category=women",
-      imageSrc: "/images/women glasses.PNG", // Updated image source for Women Glasses
-      imageAlt: "Collection of women's glasses", // Updated image source for Women Glasses
+      imageSrc: "/images/women glasses.PNG",
+      imageAlt: "Collection of women's glasses",
       aiHint: "women eyeglasses model",
     },
     {
       title: "Kids Glasses",
       href: "/products?category=kids",
       imageSrc: "/images/kiddo in glasses.PNG",
-      imageAlt: "Collection of kids' glasses", // Updated image source for Kids Glasses
+      imageAlt: "Collection of kids' glasses",
       aiHint: "kids eyeglasses fun",
     },
     {
@@ -40,26 +40,27 @@ export default function HomePage() {
       imageAlt: "Collection of sunglasses",
       aiHint: "sunglasses fashion",
     },
-    {
-      title: "Lenses",
-      href: "/products?category=lenses",
-      imageSrc: "/images/lenses.jpg",
-      imageAlt: "Close-up of optical lenses",
-      aiHint: "prescription lenses detail",
-    },
+    // Removed Lenses category
+    // {
+    //   title: "Lenses",
+    //   href: "/products?category=lenses",
+    //   imageSrc: "/images/lenses.jpg",
+    //   imageAlt: "Close-up of optical lenses",
+    //   aiHint: "prescription lenses detail",
+    // },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-start text-left">
+      <section className="relative min-h-screen flex items-center justify-start text-left bg-black">
         <Image
-          src="/images/background.png"
-          alt="Stylish person wearing glasses"
-          fill
-          className="absolute inset-0 z-0 object-cover"
-          data-ai-hint="fashion model eyeglasses"
-          priority
+          src="https://placehold.co/800x400.png" // Placeholder for the decorative image
+          alt="Decorative gold wireframe glasses"
+          width={400} // Approximate width, adjust as needed
+          height={200} // Approximate height, adjust as needed
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0 object-contain opacity-30"
+          data-ai-hint="gold wireframe glasses"
         />
         <HeroTextAnimation
           titleLine1="ClearView"
@@ -81,7 +82,7 @@ export default function HomePage() {
               Shop Our Collection
             </ScrollFadeIn>
             <ScrollFadeIn delay={200} as="div" className="mt-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-base">
+              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10 hover:text-primary px-8 py-3 text-base">
                 <Link href="/products">
                   Explore All Products <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -90,7 +91,7 @@ export default function HomePage() {
           </div>
 
           {/* Categories Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"> {/* Adjusted xl:grid-cols-4 from xl:grid-cols-5 */}
             {categories.map((category, index) => (
               <ScrollFadeIn key={category.title} delay={index * 100} as="div">
                 <Link
@@ -161,8 +162,8 @@ export default function HomePage() {
         <div className="md:grid md:grid-cols-2 items-stretch">
           <div className="relative min-h-[300px] md:min-h-0">
             <Image
-              src="https://placehold.co/800x600.png"
-              alt="Woman wearing stylish glasses in a city scene"
+              src="/images/about us.jpeg"
+              alt="Stylish person wearing glasses standing in a city"
               fill
               className="object-cover w-full h-full"
               data-ai-hint="woman glasses city"
