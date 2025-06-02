@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased flex flex-col min-h-screen`}>
         <Navbar />
         {/* Removed pt-16 as navbar is not fixed anymore, or hero is handling its own offset */}

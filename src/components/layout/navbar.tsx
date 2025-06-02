@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { Glasses, ShoppingBag, Menu, Home, Users, MapPin, Award, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { ModeToggle } from './mode-toggle';
 
 const navItems = [
   { href: '/', label: 'Home', icon: <Home className="h-4 w-4" /> },
@@ -46,7 +45,7 @@ export default function Navbar() {
             <ShoppingCart className="h-5 w-5" />
             <span className="sr-only">Cart</span>
           </Link>
-          <ModeToggle />
+          {/* <ModeToggle /> */}
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="md:hidden hover:bg-background/80 text-foreground dark:text-white">
