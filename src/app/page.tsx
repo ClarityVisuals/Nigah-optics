@@ -172,7 +172,7 @@ export default function HomePage() {
               Glasses For Everyone.
             </ScrollFadeIn>
             <ScrollFadeIn delay={200} as="p" className="text-muted-foreground mb-8 leading-relaxed">
-              EYENISA is dedicated to providing high-quality, stylish eyewear for everyone. We believe that clear vision and great style go hand-in-hand. Our curated collections feature a wide range of frames to suit every taste and need, from timeless classics to the latest trends.
+              NigaH is dedicated to providing high-quality, stylish eyewear for everyone. We believe that clear vision and great style go hand-in-hand. Our curated collections feature a wide range of frames to suit every taste and need, from timeless classics to the latest trends.
             </ScrollFadeIn>
             <ScrollFadeIn delay={300} as="div">
               <Button asChild variant="outline" size="lg" className="self-start border-foreground text-foreground hover:bg-foreground/10">
@@ -198,7 +198,7 @@ export default function HomePage() {
               Why Choose Us?
             </ScrollFadeIn>
             <ScrollFadeIn delay={200} as="p" className="text-muted-foreground mb-8 leading-relaxed">
-              At EYENISA, we're committed to providing not just eyewear, but a seamless and delightful experience. From our curated selection of high-quality frames to our expert advice and cutting-edge virtual try-on technology, discover why thousands choose us for their vision needs.
+              At NigaH, we're committed to providing not just eyewear, but a seamless and delightful experience. From our curated selection of high-quality frames to our expert advice and cutting-edge virtual try-on technology, discover why thousands choose us for their vision needs.
             </ScrollFadeIn>
           </div>
 
@@ -225,7 +225,7 @@ export default function HomePage() {
               Abdul Rafay
             </ScrollFadeIn>
             <ScrollFadeIn delay={400} as="p" className="text-sm leading-relaxed max-w-md mt-2">
-              "The team at EYENISA was incredibly helpful in finding the perfect pair of glasses for me. Their virtual try-on made the process so easy, and the quality is outstanding!"
+              "The team at NigaH was incredibly helpful in finding the perfect pair of glasses for me. Their virtual try-on made the process so easy, and the quality is outstanding!"
             </ScrollFadeIn>
           </div>
         </div>
@@ -241,7 +241,7 @@ export default function HomePage() {
             Stay In Style
           </ScrollFadeIn>
           <ScrollFadeIn delay={200} as="p" className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from EYENISA.
+            Subscribe to our newsletter for the latest arrivals, exclusive offers, and styling tips from NigaH.
           </ScrollFadeIn>
           <ScrollFadeIn delay={300} as="div">
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">

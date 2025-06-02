@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
 
@@ -15,7 +16,7 @@ export default function PrivacyPolicyPage() {
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-10 space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            Welcome to EYENISA ("we," "us," or "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regards to your personal information, please contact us at privacy@eyenisa.com.
+            Welcome to NigaH ("we," "us," or "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice or our practices with regards to your personal information, please contact us at privacy@nigah.com.
           </p>
 
           <section>
@@ -90,10 +91,10 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-3">9. How Can You Contact Us About This Notice?</h2>
             <p>
-              If you have questions or comments about this notice, you may email us at privacy@eyenisa.com or by post to:
+              If you have questions or comments about this notice, you may email us at privacy@nigah.com or by post to:
             </p>
             <p className="mt-2">
-              EYENISA<br />
+              NigaH<br />
               Attn: Privacy Officer<br />
               123 Visionary Lane<br />
               Optic City, CA 90210<br />

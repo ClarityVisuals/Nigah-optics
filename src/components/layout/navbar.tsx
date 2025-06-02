@@ -20,7 +20,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
           <Glasses className="h-7 w-7 text-primary" />
           <div>
-            <span className="text-foreground dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">EYEN</span><span className="text-primary drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">ISA</span>
+            <span className="text-foreground dark:text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">Niga</span><span className="text-primary drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">H</span>
           </div>
         </Link>
         
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <Link href="/" className="flex items-center gap-2 text-lg font-semibold mb-4">
                   <Glasses className="h-7 w-7 text-primary" />
                   <div>
-                    <span className="text-foreground dark:text-white">EYEN</span><span className="text-primary">ISA</span>
+                    <span className="text-foreground dark:text-white">Niga</span><span className="text-primary">H</span>
                   </div>
                 </Link>
                 {navItems.map((item) => (

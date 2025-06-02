@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google'; // Using Inter as a fallback for Geist
 import './globals.css';
@@ -20,7 +21,7 @@ const fontMono = Inter({ // Using Inter as fallback for Mono as well
 });
 
 export const metadata: Metadata = {
-  title: 'EYENISA - Find Your Perfect Pair',
+  title: 'NigaH - Find Your Perfect Pair',
   description: 'Discover a wide range of stylish glasses and try them on virtually.',
 };
 

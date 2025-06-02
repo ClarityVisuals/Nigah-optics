@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText } from "lucide-react";
 
@@ -15,7 +16,7 @@ export default function TermsOfServicePage() {
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-10 space-y-6 text-muted-foreground leading-relaxed">
           <p>
-            Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the EYENISA website (the "Service") operated by EYENISA ("us", "we", or "our").
+            Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the NigaH website (the "Service") operated by NigaH ("us", "we", or "our").
           </p>
           <p>
             Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users, and others who access or use the Service.
@@ -37,17 +38,17 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-3">2. Intellectual Property</h2>
             <p>
-              The Service and its original content, features, and functionality are and will remain the exclusive property of EYENISA and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of EYENISA.
+              The Service and its original content, features, and functionality are and will remain the exclusive property of NigaH and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of NigaH.
             </p>
           </section>
           
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-3">3. Links To Other Web Sites</h2>
             <p>
-              Our Service may contain links to third-party web sites or services that are not owned or controlled by EYENISA.
+              Our Service may contain links to third-party web sites or services that are not owned or controlled by NigaH.
             </p>
             <p className="mt-2">
-              EYENISA has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that EYENISA shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
+              NigaH has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that NigaH shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
             </p>
             <p className="mt-2">
               We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.
@@ -67,7 +68,7 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-3">5. Limitation Of Liability</h2>
             <p>
-              In no event shall EYENISA, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.
+              In no event shall NigaH, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.
             </p>
           </section>
           
@@ -94,7 +95,7 @@ export default function TermsOfServicePage() {
           <section>
             <h2 className="text-2xl font-semibold text-foreground mb-3">8. Contact Us</h2>
             <p>
-              If you have any questions about these Terms, please contact us at legal@eyenisa.com.
+              If you have any questions about these Terms, please contact us at legal@nigah.com.
             </p>
           </section>
         </CardContent>
