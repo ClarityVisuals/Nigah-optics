@@ -40,27 +40,19 @@ export default function HomePage() {
       imageAlt: "Collection of sunglasses",
       aiHint: "sunglasses fashion",
     },
-    // Removed Lenses category
-    // {
-    //   title: "Lenses",
-    //   href: "/products?category=lenses",
-    //   imageSrc: "/images/lenses.jpg",
-    //   imageAlt: "Close-up of optical lenses",
-    //   aiHint: "prescription lenses detail",
-    // },
   ];
 
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-start text-left bg-black">
+      <section className="relative min-h-screen flex items-center justify-start text-left">
         <Image
-          src="https://placehold.co/800x400.png" // Placeholder for the decorative image
-          alt="Decorative gold wireframe glasses"
-          width={400} // Approximate width, adjust as needed
-          height={200} // Approximate height, adjust as needed
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0 object-contain opacity-30"
-          data-ai-hint="gold wireframe glasses"
+          src="/images/background.png"
+          alt="Hero section background"
+          fill
+          className="absolute inset-0 z-0 object-cover"
+          priority // Good for LCP
+          data-ai-hint="abstract modern background" 
         />
         <HeroTextAnimation
           titleLine1="ClearView"
@@ -91,7 +83,7 @@ export default function HomePage() {
           </div>
 
           {/* Categories Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"> {/* Adjusted xl:grid-cols-4 from xl:grid-cols-5 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
             {categories.map((category, index) => (
               <ScrollFadeIn key={category.title} delay={index * 100} as="div">
                 <Link
