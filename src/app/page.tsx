@@ -161,7 +161,7 @@ export default function HomePage() {
               data-ai-hint="woman glasses city"
             />
           </div>
-          <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <div className="bg-card p-12 md:p-16 lg:p-24 flex flex-col justify-center">
             <ScrollFadeIn delay={0} as="div" className="mb-4">
               <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-sm">
                 ABOUT
@@ -188,7 +188,7 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section>
         <div className="md:grid md:grid-cols-2 items-stretch">
-          <div className="bg-card p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <div className="bg-card p-12 md:p-16 lg:p-24 flex flex-col justify-center">
             <ScrollFadeIn delay={0} as="div" className="mb-4 self-start">
               <span className="inline-block bg-primary text-primary-foreground px-3 py-1 text-xs font-semibold uppercase tracking-wider rounded-sm">
                 WHY US
@@ -202,7 +202,7 @@ export default function HomePage() {
             </ScrollFadeIn>
           </div>
 
-          <div className="bg-foreground text-primary-foreground p-8 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center min-h-[300px] md:min-h-0">
+          <div className="bg-foreground text-primary-foreground p-12 md:p-16 lg:p-24 flex flex-col justify-center items-center text-center min-h-[300px] md:min-h-0">
             <ScrollFadeIn delay={0} as="div" className="flex mb-4">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="h-6 w-6 text-yellow-400 fill-yellow-400" />
