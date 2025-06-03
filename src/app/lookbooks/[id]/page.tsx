@@ -8,13 +8,7 @@ import { getLookbookById } from '@/data/lookbooks';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ShoppingBag } from 'lucide-react';
 import ProductCard from '@/components/product-card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function LookbookDetailPage({ params }: { params: { id: string } }) {
@@ -92,16 +86,10 @@ export default function LookbookDetailPage({ params }: { params: { id: string } 
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-6 text-center md:text-left">Gallery</h2>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-5xl mx-auto shadow-xl rounded-lg overflow-hidden"
-        >
-          <CarouselContent>
+        
+          
             {[lookbook.coverImage, ...lookbook.images].map((image, index) => (
-              <CarouselItem key={index}>
+              
                 <Card className="border-0 rounded-none">
                   <CardContent className="flex aspect-[16/10] items-center justify-center p-0">
                      <Image
@@ -115,12 +103,9 @@ export default function LookbookDetailPage({ params }: { params: { id: string } 
                       />
                   </CardContent>
                 </Card>
-              </CarouselItem>
+             
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/70 hover:bg-background text-foreground" />
-          <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/70 hover:bg-background text-foreground" />
-        </Carousel>
+          
       </section>
 
       {lookbook.featuredProducts && lookbook.featuredProducts.length > 0 && (

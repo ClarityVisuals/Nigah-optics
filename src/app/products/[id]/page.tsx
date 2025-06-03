@@ -11,13 +11,7 @@ import { Separator } from '@/components/ui/separator';
 import { useToast } from "@/hooks/use-toast";
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
+
 
 export default function ProductDetailPage({ params }: { params: { id: string } }) {
   const [product, setProduct] = useState<Product | null>(null);
@@ -120,10 +114,9 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             </CardContent>
           </Card>
           
-          <Carousel opts={{ align: "start", loop: false }} className="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto">
-            <CarouselContent className="-ml-2">
+          
               {product.images.map((img, index) => (
-                <CarouselItem key={index} className="pl-2 basis-1/3 sm:basis-1/4 md:basis-1/5">
+               
                   <button
                     onClick={() => setSelectedImage(img)}
                     className={`block rounded-md overflow-hidden border-2 transition-all ${selectedImage === img ? 'border-primary ring-2 ring-primary' : 'border-transparent hover:border-muted-foreground/50'}`}
@@ -137,12 +130,9 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                       data-ai-hint="product thumbnail"
                     />
                   </button>
-                </CarouselItem>
+                
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="left-2 bg-background/80 hover:bg-background" />
-            <CarouselNext className="right-2 bg-background/80 hover:bg-background" />
-          </Carousel>
+           
         </div>
 
         {/* Product Information */}
